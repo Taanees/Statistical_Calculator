@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Playfair+Display:wght@500&family=Poppins&display=swap");
+*{
+    font-family:  'Lora', serif;
+}
+#header-content{
+    background-color:whitesmoke;
+    display:flex;
+    height: 80px;
+    padding: 10px ;
+
+}
+#name{
+    width: 80%;
+    display: flex;
+}
+#logo{
+    padding-top: 15px;
+    height: 40px;
+    
+}
+
+#head-name{
+    display :flex;
+    flex-direction: row;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;  
+}
+
+nav{
+    display: flex;
+    margin-left: 100px;
+    align-items: center;
+    
+}
+
+.nav-btn{
+    background-color: #5cadac;
+    border-radius: 15px;
+    font-size: 10px ;
+    border:none ;
+    padding: 5px 20px;
+    width:max-content;
+    font-weight:lighter;
+    margin: 5px;
+}
+
+
+main{
+    height:75vh;
+}
+footer{
+    height:5vh;
+    text-align: center ;
+    margin-top: 30px;
+}
+#main-content{
+    display: flex;
+
+}
+
+#left-column{
+    width: 17%;
+    background-color: #5cadac;
+    padding: 30px 30px 30px ;
+
+}
+.right-column{
+    width: 80%;
+    margin-left: 50px;
+    margin-right: 30px;
+    
+}
+
+.nav-content{
+    background-color: whitesmoke;
+    width: 80%;
+    height: 65vh;
+    padding: 60px 60px 60px ;
+    text-align: justify;
+    margin-right: auto;
+}
+.active {
+    text-decoration: underline #B8C8B9;
+    text-decoration-thickness: 0.19em;
+    text-underline-offset: 0.2em;
+    color: whitesmoke;
+}
+.nav-active {
+    text-decoration: underline #B8C8B9;
+    text-decoration-thickness: 0.19em;
+    text-underline-offset: 0.5em;
+    color: whitesmoke;
+}
+.menu-item{
+    margin-bottom: 25px;
+}
+.box-btn{
+    background-color: #5cadac;
+    border-radius: 15px;
+    font-size: 15px ;
+    border:none ;
+    padding: 5px 20px;
+    color: white;
+    font-weight:lighter;
+    margin: 5px;
+}
+.reset-btn{
+    background-color: #5cadac;
+    border-radius: 15px;
+    font-size: 15px ;
+    border:none ;
+    padding: 5px 20px;
+    color: white;
+    font-weight:lighter;
+    margin: 5px;
+}
+.box{
+    width:180px;
+    height: 25px;
+    background-color: silver;
+    border-radius: 15px;
+    font-size: 15px;
+    border:none ;
+    padding: 5px 20px;
+    color: black;
+    font-weight:lighter;
+    margin: 5px; 
+}
+#mean{
+    display: flex;
+    align-items: center;
+}
+#median{
+    display: flex;
+    align-items: center;
+}
+#mode{
+    display: flex;
+    align-items: center;
+}
+#variance{
+    display: flex;
+    align-items: center;
+}
+#STDdev{
+    display: flex;
+    align-items: center;
+}
+textarea{
+    background-color: silver;
+    border-radius: 15px;
+    font-size: 15px;
+    border:none ;
+    padding: 5px 20px;
+    color:black;
+    font-weight:lighter;
+    margin: 5px;
+}
+#contact{
+    text-align: center;
+    font-size: larger;
+    font-style: italic; 
+    font-weight: bold;
+}
+    
+#updateChartButton{
+    background-color: #5cadac;
+    border-radius: 15px;
+    font-size: 15px ;
+    border:none ;
+    padding: 5px 20px;
+    color: white;
+    font-weight:lighter;
+    margin: 5px;
+}
+#updateLineChartButton{
+    background-color: #5cadac;
+    border-radius: 15px;
+    font-size: 15px ;
+    border:none ;
+    padding: 5px 20px;
+    color: white;
+    font-weight:lighter;
+    margin: 5px;
+}
+
+.update-box{
+    width:180px;
+    height: 25px;
+    background-color: silver;
+    border-radius: 15px;
+    font-size: 15px;
+    border:none ;
+    padding: 5px 20px;
+    color: black;
+    font-weight:lighter;
+    margin: 5px;
+}
+@media(max-width:1300px){
+    #main-content{
+        flex-direction: column;
+    }
+    #left-column{
+        width: 100%;
+        display: inline;
+        padding: 30px 30px 30px ;
+    }
+    footer{
+      display: none;
+    }
+    .right-column{
+        width: auto;
+    }
+    .nav-content{
+        width:fit-content;
+    }
+}
