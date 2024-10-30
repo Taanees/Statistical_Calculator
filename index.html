@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STATISTICAL CALCULATOR</title>
+    <link rel="stylesheet" href="style.css"/> 
+   
+</head>
+<body>
+    <header id="header-content">
+
+        <div id="name">
+            <img src="./cal-logo.png" alt="logo" id="logo">
+            <span>
+            <p id="head-name">
+                STATISTICAL CALCULATOR</p>
+            </span>
+        </div>
+
+        <nav class="nav-right">
+            <button id="home-link" class="nav-btn" onclick="showNavContent('home')" >BAR-CHART</button>
+            <button id="line-link" class="nav-btn" onclick="showNavContent('line')" >LINE-CHART</button>
+            <button id="about-link" class="nav-btn" onclick="showNavContent('about')" >PIE-CHART</button>
+            <button id="contact-link" class="nav-btn" onclick="showNavContent('contact')" >HOME</button>
+        </nav>
+        
+    </header>
+    <main id="main-content">
+      <div id="left-column">
+          <div class="left-panel">
+              <div class="menu-item" id="mean-cal-link" onclick="showContent('mean-cal')">MEAN</div>
+              <div class="menu-item" id="median-cal-link" onclick="showContent('median-cal')">MEDIAN</div>
+              <div class="menu-item" id="mode-cal-link" onclick="showContent('mode-cal')">MODE</div>
+              <div class="menu-item" id="variance-cal-link" onclick="showContent('variance-cal')">VARIANCE</div>
+              
+          </div>
+      </div>
+      <div class="right-column" id="mean-cal" style="display: none;" >
+          <h3>MEAN</h3>
+        <form >
+          <div id="dataset">
+            <p>DATASET</p>
+             <textarea name="DATASET" cols="90" rows="10" id="data-input">
+             </textarea>
+          </div>
+          <br>
+          Enter comma "," space or "enter" after each data value.<br> The tool doesn't count empty cells or non-numeric cells.
+          <br>
+          
+          <div id="reset">
+            <button id="refresh" value="Reset Now" class="reset-btn">RESET</button>
+          </div>
+        </form>  
+          <br>
+          <div id="mean">
+             <div id="mean-box">MEAN </div>
+             <p id ="meanResult" class="box"></p><br>
+             <button id="calculate-button" class="box-btn"> Calculate</button>
+          </div>
+          
+          <div><p>The arithmetical mean is the sum of a set of numbers in the collection,<br>
+             or simply the mean or the average.<br>To calculate the mean of a given data set, we use the following formula,
+             <br> Mean (x¯) = ∑x/N</p></div>
+      </div>
+
+      <div class="right-column" id="median-cal"  style="display: none;">
+          <h3>MEDIAN</h3>
+        <form >
+          <div id="dataset">
+            <p>DATASET</p>
+             <textarea name="DATASET" cols="90" rows="10" id="data-input-median">
+             </textarea>
+          </div>
+          Enter comma "," space or "enter" after each data value.<br> The tool doesn't count empty cells or non-numeric cells.
+          <br>
+          <div id="reset-median">
+            <button id="refresh" value="Reset Now" class="reset-btn">RESET</button>
+          </div>
+        </form>  
+          <br>
+          <div id="median">
+             <label for="median-box">MEDIAN </label>
+             <p id ="medianResult" class="box"></p><br>
+             <button id="calculate-median-button" class="box-btn">Calculate</button>
+          </div>
+          
+          <div>
+             If we have an odd number of terms in the data set  we use the following formula, 
+              <br>
+            Median = (n+12)th
+             observation 	
+            <br><br>
+            If an even number of terms are given in the data set, we use the following formula, 
+            <br>
+            Median = (n2)tho bservation+(n2+1)th observation2</div>
+      </div>
+      
+      <div class="right-column" id="mode-cal"  style="display: none;">
+          <h3>MODE</h3>
+        <form >
+          <div id="dataset">
+            <p>DATASET</p>
+             <textarea name="DATASET" cols="90" rows="10" id="data-input-mode">
+             </textarea>
+          </div>
+          Enter comma "," space or "enter" after each data value.<br> The tool doesn't count empty cells or non-numeric cells.
+          <br>
+          <div id="reset-mode">
+            <button id="refresh" value="Reset Now" class="reset-btn">RESET</button>
+          </div>
+        </form>
+          <br>
+          <div id="mode">
+             <label for="mode-box">MODE</label>
+             <p id ="modeResult" class="box"></p><br>
+             <button id="calculate-mode-button" class="box-btn">Calculate</button>
+          </div>
+          
+          <div>
+          <p>In the case of clustered frequency distributions, <br>
+          it is not possible to calculate the mode simply by looking at the frequency. <br>
+          We measure the modal class in order to evaluate the data mode in such situations. <br>
+          Inside the modal class, the mode lies.
+          <br><br>
+          Mode =  l+(f1−f02f1−f0−f2)×h
+          </p>
+        </div>
+      </div>
+
+      <div class="right-column" id="variance-cal"  style="display: none;">
+        <h3>VARIANCE</h3>
+      <form >
+        <div id="dataset">
+          <p>DATASET</p>
+           <textarea name="DATASET" cols="90" rows="10" id="data-input-variance">
+           </textarea>
+        </div>
+        Enter comma "," space or "enter" after each data value.<br> The tool doesn't count empty cells or non-numeric cells.
+        <br>
+        <div id="reset-variance">
+          <button id="refresh" value="Reset Now" class="reset-btn">RESET</button>
+        </div>
+      </form>
+        <br>
+        <div id="variance">
+           <label for="variance-box">VARIANCE</label>
+           <p id ="varianceResult" class="box"></p><br>
+           <button id="calculate-variance-button" class="box-btn">Calculate</button>
+        </div>
+        
+        <div><p>The variance is defined as the total of the square distances from the<br>
+           mean (μ) of each term in the distribution, divided by the number of distribution terms (N).
+           <br><br>
+
+          Variance(𝜎2) =  ∑(xi−μ)2/N</p></div>
+    </div>
+
+      
+  
+      <div class="nav-content" id="home" style="display: none;" >
+        <canvas id="barChart" width="60" height="40" ></canvas>
+        
+        <h4>Edit Chart:</h4>
+        <label for="barChartColor">Bar Color:</label>
+        <input type="color" id="barChartColor" value="#4CAF50" class="update-box">
+        <br><br>
+        <label for="barChartTitle">Chart Title:</label>
+        <input type="text" id="barChartTitle" placeholder="Enter chart title"  class="update-box">
+        <br><br>
+        <button id="updateChartButton" >Update Chart</button>
+      </div>
+
+      
+      <div class="nav-content" id="line" style="display: none;" >
+        <canvas id="lineChart" width="60" height="40" ></canvas>
+        
+        <h4>Edit Chart:</h4>
+        <label for="lineChartColor">Line Color:</label>
+        <input type="color" id="lineChartColor" value="#4CAF50" class="update-box">
+        <br><br>
+        <label for="lineChartTitle">Chart Title:</label>
+        <input type="text" id="lineChartTitle" placeholder="Enter chart title"  class="update-box">
+        <br><br>
+        <button id="updateLineChartButton">Update Chart</button>
+      </div>
+
+      <div class="nav-content" id="about" style="display: none;"  >
+        <canvas id="pieChart"  width="60" height="40" ></canvas>
+
+       <!----<h4>Edit Chart:</h4>
+        <label for="pieColors">Pie Chart Colors (comma-separated):</label>
+        <input type="text" id="pieColors" placeholder="e.g., #FF5733, #33FF57, #3366FF"  class="update-box">
+        <br>
+        <label for="pieChartTitle">Chart Title:</label>
+        <input type="text" id="pieChartTitle" placeholder="Enter chart title"  class="update-box">
+        <br><br>
+        <button id="updatepieChartButton">Update Chart</button>-->
+      </div>
+     
+
+      <div class="nav-content" id="contact" >
+        <p>Statistics is the science concerned with developing and studying methods for 
+        collecting, analyzing, interpreting and presenting empirical data. 
+        Statistics is a highly interdisciplinary field; research in statistics finds 
+        applicability in virtually all scientific fields and research questions in the various 
+        scientific fields motivate the development of new statistical methods and theory. 
+        </p>
+        <p>We encourage you to continue exploring our Application to play around with these scientific tools.</p>
+      </div>
+      
+    </main>
+    <footer id="bottom">
+      <span> &copy; Statistical Calculator </span>
+    </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./index.js"></script>
+
+    
+
+</body>
+</html>
